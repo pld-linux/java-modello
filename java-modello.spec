@@ -20,7 +20,7 @@ Release:	0.1
 License:	BSD-like
 Group:		Libraries/Java
 # svn export http://svn.codehaus.org/modello/tags/modello-1.0.1/
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{srcname}-%{version}.tar.bz2
 # Source0-md5:	ca3eefd13ff5f2e087d44a9c0560ed87
 URL:		http://modello.codehaus.org/
 %{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
