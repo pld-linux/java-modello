@@ -4,14 +4,14 @@
 # Conditional build:
 %bcond_without	javadoc		# don't build javadoc
 %bcond_without	tests		# don't build and run tests
+%bcond_with	java_sun	# build with gcj
+
 %if "%{pld_release}" == "ti"
-%bcond_without	java_sun	# build with gcj
-%else
-%bcond_with	java_sun	# build with java-sun
+%define	with_java_sun	1
 %endif
-#
+
 %include	/usr/lib/rpm/macros.java
-#
+
 %define		srcname		modello
 Summary:	Data Model toolkit
 Name:		java-modello
@@ -70,7 +70,8 @@ Pliki demonstracyjne i przykłady dla pakietu %{srcname}.
 export JAVA_HOME="%{java_home}"
 
 install -d build
-#%javac -classpath $CLASSPATH -source 1.5 -target 1.5 -d build $(find -name '*.java')
+#%%javac -classpath $CLASSPATH -source 1.5 -target 1.5 -d build $(find -name '*.java')
+%javac -source 1.5 -target 1.5 -d build $(find -name '*.java')
 
 %if %{with javadoc}
 %javadoc -d apidocs \
