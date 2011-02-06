@@ -62,9 +62,9 @@ Modello is a Data Model toolkit in use by the Maven 2 Project.
 cp %{SOURCE11} LICENSE.txt
 
 %install
-
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_javadir}/modello
+
 install %{SOURCE0} $RPM_BUILD_ROOT%{_javadir}/modello/modello-core.1.0.1.jar
 install %{SOURCE1} $RPM_BUILD_ROOT%{_javadir}/modello/modello-maven-plugin.1.0.1.jar
 install %{SOURCE2} $RPM_BUILD_ROOT%{_javadir}/modello/modello-plugin-converters.1.0.1.jar
