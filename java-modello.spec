@@ -2,7 +2,6 @@
 # - package maven and plexus and THEN try to build it from sources
 # - dependencies (plexus?)
 #
-%include	/usr/lib/rpm/macros.java
 #
 %define		srcname		modello
 Summary:	Data Model toolkit
